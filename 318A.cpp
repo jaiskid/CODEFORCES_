@@ -19,7 +19,21 @@ using namespace std;
 #define mod 1000000007
 int main() {
 	fastIO
-	int a, b, c;
-	cin >> a >> b >> c;
-	cout << 4 * (sqrt(b * c / a) + sqrt(a * b / c) + sqrt(c * a / b));
+	long long  n;
+	cin >> n;
+	long long  x;
+	cin >> x;
+	// long long nums[n] = {0};
+	// ll y = 1;
+	// for (int i = 1; i <= n; i++) {
+	// 	if (i % 2 == 1)
+	// 		nums[y++] = i;
+	// }
+	// for (int i = 1; i <= n; i++) {
+	// 	if (i % 2 == 0)
+	// 		nums[y++] = i;
+	// }
+	// cout << nums[x];
+	n = (n + 1) / 2;
+	(x > n) ? cout << 2 * (x - n) : cout << 2 * x - 1;
 }

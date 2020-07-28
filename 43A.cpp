@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 #define ll long long int
 #define mp make_pair
 #define pb push_back
@@ -19,7 +18,10 @@ using namespace std;
 #define mod 1000000007
 int main() {
 	fastIO
-	int a, b, c;
-	cin >> a >> b >> c;
-	cout << 4 * (sqrt(b * c / a) + sqrt(a * b / c) + sqrt(c * a / b));
+	int n;
+	cin >> n;
+	string arr[n];
+	F(arr, n);
+	sort(arr, arr + n);
+	cout << arr[n / 2];
 }

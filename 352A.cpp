@@ -17,9 +17,23 @@ using namespace std;
 #define PNF1(a,n,m) for(int i=1;i<=n;i++){for(int j=1;j<=m;j++){cout<<a[i][j]<<' ';}cout<<endl;}cout<<endl;
 #define AS 200001
 #define mod 1000000007
+bool is_magical(string number) {
+	for (int i = 0; i < (int)number.size(); i++) {
+		if (number[i] != '1' and number[i] != '4')
+			return false;
+		if (number[0] == '4')
+			return false;
+		if (number.find("444") != number.npos)
+			return false;
+	}
+	return true;
+}
 int main() {
 	fastIO
-	int a, b, c;
-	cin >> a >> b >> c;
-	cout << 4 * (sqrt(b * c / a) + sqrt(a * b / c) + sqrt(c * a / b));
+	string number;
+	cin >> number;
+	if (is_magical(number))
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
 }
